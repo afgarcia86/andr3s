@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "Bash(npm install livekit-server-sdk @livekit/components-react livekit-client)"
+    ]
+  }
+}
