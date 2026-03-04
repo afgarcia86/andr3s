@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install)",
       "Bash(npm run build)",
-      "Bash(npm install livekit-server-sdk @livekit/components-react livekit-client)"
+      "Bash(npm install livekit-server-sdk @livekit/components-react livekit-client)",
+      "Bash(head -30 /Users/andresgarcia/andr3s/knowledge/*.md)",
+      "Bash(wc -l /Users/andresgarcia/andr3s/knowledge/*.md)"
     ]
   }
 }

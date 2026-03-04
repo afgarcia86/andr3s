@@ -1,0 +1,28 @@
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>
+
+# Block .env and other sensitive files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# SPA routing
+RewriteEngine On
+
+# Skip existing files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule . - [L]
+
+# Skip /api/ (handled by api/.htaccess)
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule . - [L]
+
+# Everything else → index.html
+RewriteRule . /index.html [L]

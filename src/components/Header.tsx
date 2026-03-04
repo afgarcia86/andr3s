@@ -18,6 +18,7 @@ export function Header() {
         <ThemeToggle />
         <a
           href="/resume.pdf"
+          download="Andres_Garcia_Lead_Engineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm font-medium px-3 py-1.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"

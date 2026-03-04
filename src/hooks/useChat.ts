@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+// import { getCsrfToken } from "../lib/csrf";
 
 export interface Message {
   role: "user" | "assistant";
@@ -23,9 +24,14 @@ export function useChat() {
     setIsLoading(true);
 
     try {
+      // const csrfToken = await getCsrfToken();
+
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          // "X-CSRF-Token": csrfToken,
+        },
         body: JSON.stringify({
           messages: updatedMessages.map((m) => ({
             role: m.role,

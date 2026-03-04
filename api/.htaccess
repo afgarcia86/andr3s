@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Clean API URLs → PHP files
+RewriteRule ^chat$ chat.php [L,QSA]
+RewriteRule ^livekit/token$ livekit-token.php [L,QSA]
+RewriteRule ^csrf-token$ csrf-token.php [L,QSA]
+
+# Block direct access to includes
+RewriteRule ^includes/ - [F,L]
