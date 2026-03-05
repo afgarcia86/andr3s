@@ -5,8 +5,11 @@ from dotenv import load_dotenv
 from livekit import rtc
 from livekit.agents import (
     Agent,
+    AudioConfig,
     AgentServer,
     AgentSession,
+    BuiltinAudioClip,
+    BackgroundAudioPlayer,
     JobContext,
     JobProcess,
     cli,
@@ -85,6 +88,10 @@ async def andr3s_agent(ctx: JobContext):
         ],
     )
 
+    background_audio = BackgroundAudioPlayer(
+        ambient_sound=AudioConfig(source=BuiltinAudioClip.OFFICE_AMBIENCE, volume=1.0),
+    )
+
     # Start the session, which initializes the voice pipeline and warms up the models
     await session.start(
         agent=Assistant(),
@@ -100,6 +107,8 @@ async def andr3s_agent(ctx: JobContext):
             ),
         ),
     )
+
+    await background_audio.start(room=ctx.room, agent_session=session)
 
     # Join the room and connect to the user
     await ctx.connect()
