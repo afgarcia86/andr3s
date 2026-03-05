@@ -61,19 +61,12 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
     el.style.height = Math.min(el.scrollHeight, 160) + "px";
   };
 
+  const hasText = value.trim().length > 0;
+
   return (
     <>
-      <div className="flex items-center gap-2 rounded-full px-5 py-2.5 border bg-white/80 dark:bg-white/[0.06] backdrop-blur-xl border-black/10 dark:border-white/[0.06] focus-within:border-accent/50 transition-colors">
-        <textarea
-          ref={textareaRef}
-          value={value}
-          onChange={handleInput}
-          onKeyDown={handleKeyDown}
-          placeholder="Ask anything about my experience…"
-          disabled={disabled}
-          rows={1}
-          className="flex-1 bg-transparent resize-none outline-none text-sm sm:text-base leading-normal placeholder:text-current/35 disabled:opacity-50 max-h-40"
-        />
+      <div className="flex items-center gap-2 rounded-full px-3 py-2 border bg-white/80 dark:bg-white/[0.06] backdrop-blur-xl border-black/10 dark:border-white/[0.06] focus-within:border-accent/50 transition-colors">
+        {/* Phone / voice call button (left side) */}
         <div className="relative shrink-0">
           <button
             onClick={() => {
@@ -81,7 +74,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
               setShowTooltip(false);
             }}
             disabled={disabled}
-            className="p-1.5 rounded-full transition-all opacity-60 hover:opacity-100 hover:bg-black/[0.06] dark:hover:bg-white/[0.1] disabled:opacity-30 disabled:cursor-not-allowed"
+            className="p-2 rounded-full transition-all opacity-60 hover:opacity-100 hover:bg-black/[0.06] dark:hover:bg-white/[0.1] disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Start voice call"
           >
             <svg
@@ -107,6 +100,43 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
             <div className="voice-tooltip-arrow" />
           </div>
         </div>
+
+        <textarea
+          ref={textareaRef}
+          value={value}
+          onChange={handleInput}
+          onKeyDown={handleKeyDown}
+          placeholder="Ask anything about my experience…"
+          disabled={disabled}
+          rows={1}
+          className="flex-1 bg-transparent resize-none outline-none text-sm sm:text-base leading-normal placeholder:text-current/35 disabled:opacity-50 max-h-40 px-1"
+        />
+
+        {/* Submit button (right side) */}
+        <button
+          onClick={handleSubmit}
+          disabled={disabled || !hasText}
+          className={`shrink-0 p-2 rounded-full transition-all ${
+            hasText
+              ? "bg-accent text-white opacity-100 hover:opacity-90"
+              : "opacity-30 cursor-default"
+          } disabled:cursor-not-allowed`}
+          aria-label="Send message"
+        >
+          <svg
+            className="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+            />
+          </svg>
+        </button>
       </div>
 
       {showVoiceCall && (

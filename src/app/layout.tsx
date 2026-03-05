@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     url: "https://andr3s.com",
     siteName: "andr3s",
     type: "website",
+    images: [
+      {
+        url: "https://andr3s.com/og-image.jpg",
+        width: 1024,
+        height: 1024,
+        alt: "Andres Garcia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "andr3s — What would you like to know?",
+    description:
+      "Chat with an AI that knows everything about Andres' experience, projects, and skills.",
+    images: ["https://andr3s.com/og-image.jpg"],
   },
 };
 

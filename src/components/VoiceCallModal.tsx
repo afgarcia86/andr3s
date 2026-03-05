@@ -77,6 +77,23 @@ export function VoiceCallModal({ onClose }: VoiceCallModalProps) {
     try {
       setLoading(true);
       setError(null);
+
+      // Request mic permission immediately (within user-gesture context).
+      // iOS Safari silently blocks getUserMedia if the call isn't made
+      // synchronously from the tap — awaiting the token fetch first
+      // loses the gesture context and the first call fails.
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+        // Release — LiveKit will acquire its own stream once connected.
+        stream.getTracks().forEach((t) => t.stop());
+      } catch {
+        throw new Error(
+          "Microphone access is required for voice calls. Please allow microphone permission and try again."
+        );
+      }
+
       const csrfToken = await getCsrfToken();
       const res = await fetch("/api/livekit/token", {
         method: "POST",
