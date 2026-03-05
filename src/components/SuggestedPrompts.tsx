@@ -1,7 +1,7 @@
 "use client";
 
 const PROMPTS = [
-  "Give me the TLDR overview.",
+  "Give me the TL;DR overview.",
   "What systems have you built?",
   "What are your strongest skills?",
   "What roles are you a good fit for?",
@@ -13,7 +13,7 @@ interface SuggestedPromptsProps {
 
 export function SuggestedPrompts({ onSelect }: SuggestedPromptsProps) {
   return (
-    <div className="hidden sm:grid sm:grid-cols-2 gap-2.5 w-full max-w-lg">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:w-full max-w-lg">
       {PROMPTS.map((prompt) => (
         <button
           key={prompt}

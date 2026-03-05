@@ -16,7 +16,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
 
   // Show voice call tooltip on page load
   useEffect(() => {
-    const showTimer = setTimeout(() => setShowTooltip(true), 2000);
+    const showTimer = setTimeout(() => setShowTooltip(true), 250);
     const hideTimer = setTimeout(() => setShowTooltip(false), 7000);
     return () => {
       clearTimeout(showTimer);
@@ -103,7 +103,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           <div
             className={`voice-tooltip ${showTooltip ? "voice-tooltip-visible" : ""}`}
           >
-            <span>Talk to Andr3s</span>
+            <span>Talk to andr3s</span>
             <div className="voice-tooltip-arrow" />
           </div>
         </div>

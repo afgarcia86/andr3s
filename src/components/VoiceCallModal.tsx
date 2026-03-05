@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import { getCsrfToken } from "../lib/csrf";
 import {
   LiveKitRoom,
   RoomAudioRenderer,
@@ -76,9 +77,13 @@ export function VoiceCallModal({ onClose }: VoiceCallModalProps) {
     try {
       setLoading(true);
       setError(null);
+      const csrfToken = await getCsrfToken();
       const res = await fetch("/api/livekit/token", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken,
+        },
         body: JSON.stringify({}),
       });
       if (!res.ok) {

@@ -196,7 +196,6 @@ curl_setopt_array($ch, [
 $ok        = curl_exec($ch);
 $curl_err  = curl_errno($ch);
 $http_code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
 
 if (!$ok || $curl_err || $http_code >= 400) {
     echo 'data: ' . json_encode(['error' => 'Something went wrong. Please try again.']) . "\n\n";

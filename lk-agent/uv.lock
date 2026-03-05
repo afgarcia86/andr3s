@@ -12,9 +12,8 @@ name = "agent-starter-python"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "livekit-agents", extra = ["silero", "turn-detector"] },
+    { name = "livekit-agents", extra = ["openai", "silero", "turn-detector"] },
     { name = "livekit-plugins-noise-cancellation" },
-    { name = "livekit-plugins-openai" },
     { name = "python-dotenv" },
 ]
 
@@ -27,9 +26,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "livekit-agents", extras = ["silero", "turn-detector"], specifier = "~=1.4" },
+    { name = "livekit-agents", extras = ["silero", "openai", "turn-detector"], specifier = "~=1.4" },
     { name = "livekit-plugins-noise-cancellation", specifier = "~=0.2" },
-    { name = "livekit-plugins-openai", specifier = "~=1.4" },
     { name = "python-dotenv" },
 ]
 
@@ -1061,6 +1059,9 @@ codecs = [
 ]
 images = [
     { name = "pillow" },
+]
+openai = [
+    { name = "livekit-plugins-openai" },
 ]
 silero = [
     { name = "livekit-plugins-silero" },

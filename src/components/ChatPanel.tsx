@@ -45,7 +45,7 @@ export function ChatPanel() {
             What would you like to know?
           </h1>
 
-          <div className="w-full mb-6">
+          <div className="w-full mb-3">
             <ChatInput onSend={sendMessage} disabled={isLoading} />
           </div>
 

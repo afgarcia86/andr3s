@@ -13,16 +13,25 @@ function check_origin(): bool
     $c = config();
     $allowed = $c['allowed_origins'];
 
-    // Skip origin check in development or if no origins configured
+    // Skip origin check if no origins configured
     if (empty($allowed)) return true;
 
-    $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+    $origin  = $_SERVER['HTTP_ORIGIN'] ?? '';
+    $referer = $_SERVER['HTTP_REFERER'] ?? '';
+
+    // No Origin and no Referer = same-origin request (browsers omit
+    // the Origin header on same-origin GETs) or server-side proxy.
+    // Origin checking rejects *wrong* origins, not *absent* ones.
+    if ($origin === '' && $referer === '') return true;
+
     if ($origin && in_array($origin, $allowed, true)) return true;
 
-    $referer = $_SERVER['HTTP_REFERER'] ?? '';
     if ($referer) {
         $parsed = parse_url($referer);
         $ref_origin = ($parsed['scheme'] ?? '') . '://' . ($parsed['host'] ?? '');
+        if (!empty($parsed['port'])) {
+            $ref_origin .= ':' . $parsed['port'];
+        }
         if (in_array($ref_origin, $allowed, true)) return true;
     }
 
@@ -256,7 +265,7 @@ function check_csrf(): void
 {
     $token = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
     if (!$token || !verify_csrf_token($token)) {
-        // send_json_error(403, 'Invalid or expired token.');
+        send_json_error(403, 'Invalid or expired token.');
     }
 }
 

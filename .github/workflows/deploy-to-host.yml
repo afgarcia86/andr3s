@@ -57,6 +57,7 @@ jobs:
         run: |
           rsync -az --delete \
             --exclude ".htaccess" \
+            --exclude ".env" \
             -e "ssh -p ${{ secrets.HOSTINGER_PORT }}" \
             "${{ steps.out.outputs.dir }}/" \
             "${{ secrets.HOSTINGER_USER }}@${{ secrets.HOSTINGER_HOST }}:${{ secrets.HOSTINGER_PUBLIC_HTML_PATH }}"
@@ -70,4 +71,4 @@ jobs:
             --exclude "node_modules" \
             -e "ssh -p ${{ secrets.HOSTINGER_PORT }}" \
             "api/" \
-            "${{ secrets.HOSTINGER_USER }}@${{ secrets.HOSTINGER_HOST }}:${{ secrets.HOSTINGER_PUBLIC_HTML_PATH }}"
+            "${{ secrets.HOSTINGER_USER }}@${{ secrets.HOSTINGER_HOST }}:${{ secrets.HOSTINGER_PUBLIC_HTML_PATH }}/api/"
