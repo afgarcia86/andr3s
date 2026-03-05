@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://andr3s.com/og-image.jpg",
+        url: "https://andr3s.com/andres.jpg",
         width: 1024,
         height: 1024,
         alt: "Andres Garcia",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "andr3s — What would you like to know?",
     description:
       "Chat with an AI that knows everything about Andres' experience, projects, and skills.",
-    images: ["https://andr3s.com/og-image.jpg"],
+    images: ["https://andr3s.com/andres.jpg"],
   },
 };
 
