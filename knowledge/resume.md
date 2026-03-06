@@ -32,7 +32,7 @@ Technologies: C++, Kotlin, Python, GraphQL, cloud services, AI/ML inference syst
 ### Solutions Architect / Partner Engineering Lead — RealPage
 *2021 – 2023*
 
-- Built and led a Partner Engineering team responsible for integrations between stratis IoT technology, RealPage systems, and external partners.
+- Built and led a Partner Engineering team responsible for integrations between STRATIS IoT technology, RealPage systems, and external partners.
 - Managed three engineers and oversaw multiple partner integrations across the platform ecosystem.
 - Worked closely with product, engineering, and partner teams to design scalable integration patterns.
 
@@ -40,10 +40,10 @@ Technologies: APIs, backend services, partner SDKs, IoT integrations, cloud plat
 
 ---
 
-### Lead Partner Solutions Engineer — stratis IoT
+### Lead Partner Solutions Engineer — STRATIS IoT
 *2019 – 2021*
 
-- Worked directly with strategic partners integrating the stratis smart home platform.
+- Worked directly with strategic partners integrating the STRATIS smart home platform.
 - Facilitated technical workshops and architecture sessions with enterprise partners.
 - Built prototypes and integration solutions to validate partner use cases and platform capabilities.
 

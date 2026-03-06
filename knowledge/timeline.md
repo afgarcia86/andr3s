@@ -27,11 +27,11 @@ One of the startups I had worked with through Dreamit, SnipSnap, later invited m
 ## Acquisition & Platform Expansion — Slyce
 SnipSnap was eventually acquired by Slyce, where my role evolved significantly. I transitioned into backend systems and solutions engineering, eventually becoming Director of Solutions Engineering. I worked closely with enterprise partners to design and implement computer vision-powered retail solutions.
 
-## Enterprise Partnerships — stratis IoT
-I joined stratis IoT as Lead Partner Solutions Engineer, where I worked with major technology partners integrating the stratis smart-home platform. This role strengthened my confidence as a self-taught engineer and highlighted one of my strongest skills: bridging the gap between engineering teams and strategic partners.
+## Enterprise Partnerships — STRATIS IoT
+I joined STRATIS IoT as Lead Partner Solutions Engineer, where I worked with major technology partners integrating the STRATIS smart-home platform. This role strengthened my confidence as a self-taught engineer and highlighted one of my strongest skills: bridging the gap between engineering teams and strategic partners.
 
 ## Building Teams — RealPage
-After stratis was acquired by RealPage, I joined the RealPage engineering organization and helped build a Partner Engineering team. I managed three engineers and oversaw integrations between stratis technology, internal RealPage systems, and external partners.
+After STRATIS was acquired by RealPage, I joined the RealPage engineering organization and helped build a Partner Engineering team. I managed three engineers and oversaw integrations between STRATIS technology, internal RealPage systems, and external partners.
 
 ## Present — Lead Engineer at Harbor
 Today I serve as Lead Engineer at Harbor, where I joined as the first engineering hire. I’ve helped turn an early concept into a real product used by parents to reduce stress and get better rest. My work spans device software, backend systems, AI-powered insights, and product architecture.

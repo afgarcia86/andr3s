@@ -14,7 +14,7 @@
 
 ## Leadership & Impact
 - Joined Harbor as employee #1 and helped turn an early concept into a real product used by parents to reduce stress and get better rest.
-- Built and led a Partner Engineering team at RealPage with three direct reports, managing integrations between stratis IoT, internal RealPage products, and external partners.
+- Built and led a Partner Engineering team at RealPage with three direct reports, managing integrations between STRATIS IoT, internal RealPage products, and external partners.
 
 ## Recognition
 - Selected as Designer-in-Residence for the Dreamit Venture Accelerator, where I helped multiple early-stage startups with product design and technical direction.

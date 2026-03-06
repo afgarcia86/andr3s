@@ -17,7 +17,7 @@
   - Worked closely with product and hardware teams to bring a complex consumer product to market.
 - **Link:** private
 
-## Project 2: stratis / RealPage IoT Partner Platform
+## Project 2: STRATIS / RealPage IoT Partner Platform
 - **What:** A platform for integrating smart home devices and partner services into multifamily residential technology ecosystems.
 - **Role:** Lead Partner Solutions Engineer → Engineering Manager
 - **Stack:** APIs, SDKs, backend services, IoT integrations, cloud platforms
