@@ -41,7 +41,7 @@ Technologies: APIs, backend services, partner SDKs, IoT integrations, cloud plat
 ---
 
 ### Lead Partner Solutions Engineer — stratis IoT
-*2019 – 2023*
+*2019 – 2021*
 
 - Worked directly with strategic partners integrating the stratis smart home platform.
 - Facilitated technical workshops and architecture sessions with enterprise partners.
