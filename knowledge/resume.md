@@ -95,7 +95,7 @@ Technologies: 3D modeling tools, web development
 ## Education
 
 - **Bachelor of Science — Industrial Design**
-  Philadelphia University (now Jefferson University)
+  The Art Institute of Philadelphia
 
 ## Skills
 
