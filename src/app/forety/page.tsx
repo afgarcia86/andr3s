@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const GOAL = 2500;
-const RAISED = 800;
+const RAISED = 950;
 const PERCENT = Math.round((RAISED / GOAL) * 100);
 
 const ZELLE_PHONE = "7033891081";
